@@ -1,5 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import GlobalStyle from "./styles";
 import App from "./components/App";
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(
+  <>
+    <GlobalStyle />
+    <App />
+  </>,
+  document.getElementById("app")
+);
