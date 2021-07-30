@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: sans-serif;
+        font-family: 'Lato', sans-serif;
         font-size: 1.4rem;
     }
 `;
