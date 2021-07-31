@@ -9,13 +9,15 @@ const Home = () => {
       <Container>
         <Black>BIENVENIDO</Black>
         <Description>
-          Somos un sistema de chat minimalista y privado, no necesitas un número
-          celular, ni nadie sabrá que estás en línea, lo único que necesitas es
-          un correo válido.
+          <span>
+            Somos un sistema de chat minimalista y privado, no necesitas un
+            correo electrónico ni número celular.
+          </span>
+          <span>Nadie sabrá que estás en línea, te lo aseguramos.</span>
         </Description>
         <Subcontainer>
           <Pressabe>Conocer más {">"}</Pressabe>
-          <Link to="/signin">
+          <Link to="/signup">
             <ButtonBlue>Unirse</ButtonBlue>
           </Link>
         </Subcontainer>

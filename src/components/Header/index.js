@@ -7,12 +7,12 @@ const Header = () => {
   return (
     <Container>
       <Maxwidth>
-        <Link to="/">
-          <Logo>
+        <Logo>
+          <Link to="/">
             <Blue>CHAT</Blue>
             <White>ISIMO</White>
-          </Logo>
-        </Link>
+          </Link>
+        </Logo>
       </Maxwidth>
     </Container>
   );
