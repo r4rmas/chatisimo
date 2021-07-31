@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Black, Description, Container, Subcontainer } from "./styles";
 import { Page, Pressabe, ButtonBlue } from "../../styles";
 
@@ -14,7 +15,9 @@ const Home = () => {
         </Description>
         <Subcontainer>
           <Pressabe>Conocer más {">"}</Pressabe>
-          <ButtonBlue>Unirse</ButtonBlue>
+          <Link to="/signin">
+            <ButtonBlue>Unirse</ButtonBlue>
+          </Link>
         </Subcontainer>
       </Container>
     </Page>

@@ -3,33 +3,36 @@ import colors from "./colors";
 
 const GlobalStyle = createGlobalStyle`
     * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;     
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;     
     }
 
     html {
-        font-size: 62.5%;
+      font-size: 62.5%;
     }
 
     body {
-        font-family: 'Lato', sans-serif;
-        font-size: 1.4rem;
+      font-family: 'Lato', sans-serif;
+      font-size: 1.4rem;
     }
     button {
-        border: none;
-        color: ${colors.black};
-        cursor: pointer;
-        font-family: 'Lato';
-        font-size: 1.6rem;
-        font-weight: bold;
-        outline: none;
-        padding: 1rem;
-        width: 14rem;
+      border: none;
+      color: ${colors.black};
+      cursor: pointer;
+      font-family: 'Lato';
+      font-size: 1.6rem;
+      font-weight: bold;
+      outline: none;
+      padding: 1rem;
+      width: 14rem;
+    }
+    a {
+      text-decoration: none;
     }
     #app {
-        height: 100vh;
-        width: 100vw;
+      height: 100vh;
+      width: 100vw;
     }
 `;
 

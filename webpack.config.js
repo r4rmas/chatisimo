@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
+    publicPath: "/",
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -35,5 +36,6 @@ module.exports = {
     contentBase: path.join(__dirname, "build"),
     compress: true,
     port: 8080,
+    historyApiFallback: true,
   },
 };

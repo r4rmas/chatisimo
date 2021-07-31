@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Logo, Blue, White } from "./styles";
 import { Maxwidth } from "../../styles";
 
@@ -6,10 +7,12 @@ const Header = () => {
   return (
     <Container>
       <Maxwidth>
-        <Logo>
-          <Blue>CHAT</Blue>
-          <White>ISIMO</White>
-        </Logo>
+        <Link to="/">
+          <Logo>
+            <Blue>CHAT</Blue>
+            <White>ISIMO</White>
+          </Logo>
+        </Link>
       </Maxwidth>
     </Container>
   );
