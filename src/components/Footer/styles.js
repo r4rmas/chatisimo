@@ -6,7 +6,13 @@ export const Container = styled.div`
   background-color: ${colors.black};
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem;
+  width: 100%;
+`;
+
+export const Subcontainer = styled.div`
+  display: flex;
+  justify-content: center;
   width: 100%;
 `;
 
@@ -17,5 +23,15 @@ export const Blue = styled.span`
 
   &:hover {
     color: ${colors.white};
+  }
+`;
+
+export const White = styled.span`
+  color: ${colors.white};
+  cursor: pointer;
+  margin: 0 0.2rem;
+
+  &:hover {
+    color: ${colors.blue};
   }
 `;

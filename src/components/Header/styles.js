@@ -3,11 +3,13 @@ import colors from "../../colors";
 
 export const Container = styled.div`
   background-color: ${colors.black};
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
   width: 100%;
 `;
 
-export const Logo = styled.div``;
+export const Logo = styled.h1``;
 
 export const Blue = styled.span`
   color: ${colors.blue};

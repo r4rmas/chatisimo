@@ -1,13 +1,16 @@
 import React from "react";
 import { Container, Logo, Blue, White } from "./styles";
+import { Maxwidth } from "../../styles";
 
 const Header = () => {
   return (
     <Container>
-      <Logo>
-        <Blue>CHAT</Blue>
-        <White>ISIMO</White>
-      </Logo>
+      <Maxwidth>
+        <Logo>
+          <Blue>CHAT</Blue>
+          <White>ISIMO</White>
+        </Logo>
+      </Maxwidth>
     </Container>
   );
 };
