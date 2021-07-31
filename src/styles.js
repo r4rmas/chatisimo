@@ -65,7 +65,7 @@ export const Page = styled.div`
   width: 100%;
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
   color: ${colors.black};
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@ export const Form = styled.div`
   width: 100%;
 `;
 
-export const Label = styled.span`
+export const Label = styled.label`
   letter-spacing: 0.1rem;
   margin-bottom: 1rem;
 `;

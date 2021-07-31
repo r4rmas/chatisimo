@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import colors from "../../colors";
 
-export const Container = styled.div`
+export const Container = styled.footer`
   align-items: center;
   background-color: ${colors.black};
   display: flex;

@@ -6,9 +6,9 @@ const Signin = () => {
   return (
     <Page>
       <Form>
-        <Black>UNIRSE</Black>
-        <Label required>Usuario:</Label>
-        <Input />
+        <Black>ENTRAR</Black>
+        <Label>Usuario:</Label>
+        <Input required />
         <Label>Contraseña:</Label>
         <Input type="password" required />
         <Container>

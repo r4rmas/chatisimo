@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import colors from "../../colors";
 
-export const Container = styled.div`
+export const Container = styled.header`
   align-items: center;
   background-color: ${colors.black};
   display: flex;
@@ -31,7 +31,7 @@ export const White = styled.span`
   font-weight: bolder;
 `;
 
-export const Navigator = styled.div``;
+export const Navigator = styled.nav``;
 
 export const Endpoint = styled.span`
   color: ${colors.white};
