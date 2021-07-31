@@ -28,7 +28,7 @@ const Header = () => {
                 SOBRE NOSOTROS
               </Endpoint>
             </Link>
-            <Link to="/">
+            <Link to="/signin">
               <ButtonBlue style={{ padding: ".6rem", width: "9rem" }}>
                 ENTRAR
               </ButtonBlue>

@@ -8,11 +8,11 @@ const Signup = () => {
       <Form>
         <Black>UNIRSE</Black>
         <Label>Nuevo usuario:</Label>
-        <Input />
+        <Input required />
         <Label>Nueva contraseña:</Label>
-        <Input type="password" />
+        <Input type="password" required />
         <Label>Repita la contraseña:</Label>
-        <Input type="password" />
+        <Input type="password" required />
         <Container>
           <ButtonBlue>UNIRSE</ButtonBlue>
         </Container>
