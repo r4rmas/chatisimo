@@ -27,6 +27,12 @@ const GlobalStyle = createGlobalStyle`
       padding: 1rem;
       width: 14rem;
     }
+    input {
+      color: ${colors.black};
+      font-family: "Lato";
+      font-size: 1.6rem;
+      outline: none;
+    }
     a {
       text-decoration: none;
     }
@@ -41,6 +47,10 @@ export const Maxwidth = styled.div`
   width: 100%;
 `;
 
+export const Center = styled.div`
+  margin: 0 auto;
+`;
+
 export const Screen = styled.div`
   display: flex;
   flex-direction: column;
@@ -53,6 +63,26 @@ export const Page = styled.div`
   height: 100%;
   justify-content: center;
   width: 100%;
+`;
+
+export const Form = styled.div`
+  color: ${colors.black};
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  max-width: 300px;
+  width: 100%;
+`;
+
+export const Label = styled.span`
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+`;
+
+export const Input = styled.input`
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+  padding: 0.1rem;
 `;
 
 export const Pressabe = styled.button`

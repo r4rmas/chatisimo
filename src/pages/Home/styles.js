@@ -10,7 +10,9 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const Subcontainer = styled.div``;
+export const Subcontainer = styled.div`
+  margin-top: 1rem;
+`;
 
 export const Black = styled.h2`
   color: ${colors.black};

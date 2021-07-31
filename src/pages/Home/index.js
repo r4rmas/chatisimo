@@ -10,10 +10,10 @@ const Home = () => {
         <Black>BIENVENIDO</Black>
         <Description>
           <span>
-            Somos un sistema de chat minimalista y privado, no necesitas un
-            correo electrónico ni número celular.
+            Somos un sistema de chat minimalista y privado. Nadie sabrá que
+            estás en línea, te lo aseguramos. Libres de spywares. No necesitas
+            correo eléctronico ni número celular para unirte.
           </span>
-          <span>Nadie sabrá que estás en línea, te lo aseguramos.</span>
         </Description>
         <Subcontainer>
           <Pressabe>Conocer más {">"}</Pressabe>
