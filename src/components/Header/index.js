@@ -8,8 +8,9 @@ import {
   White,
   Navigator,
   Endpoint,
+  ButtonBlue,
 } from "./styles";
-import { Maxwidth, ButtonBlue } from "../../styles";
+import { Maxwidth } from "../../styles";
 
 const Header = () => {
   return (
@@ -23,10 +24,8 @@ const Header = () => {
             </Link>
           </Logo>
           <Navigator>
-            <Link to="/">
-              <Endpoint style={{ fontSize: "1.6rem", fontWeight: "bold" }}>
-                SOBRE NOSOTROS
-              </Endpoint>
+            <Link to="/about">
+              <Endpoint>SOBRE NOSOTROS</Endpoint>
             </Link>
             <Link to="/signin">
               <ButtonBlue style={{ padding: ".6rem", width: "9rem" }}>

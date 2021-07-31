@@ -7,7 +7,9 @@ const Footer = () => {
     <Container>
       <Maxwidth>
         <Subcontainer>
-          <White>RAUL ARMAS </White>
+          <a href="https://raularmas.com">
+            <White>RAUL ARMAS </White>{" "}
+          </a>
           <White>· </White>
           <White>LEONARDO BENITEZ </White>
           <White>· </White>

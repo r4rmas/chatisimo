@@ -16,7 +16,9 @@ const Home = () => {
           </span>
         </Description>
         <Subcontainer>
-          <Pressabe>Conocer más {">"}</Pressabe>
+          <Link to="/about">
+            <Pressabe>Conocer más {">"}</Pressabe>
+          </Link>
           <Link to="/signup">
             <ButtonBlue>Unirse</ButtonBlue>
           </Link>

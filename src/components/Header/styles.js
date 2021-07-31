@@ -35,7 +35,13 @@ export const Navigator = styled.div``;
 
 export const Endpoint = styled.span`
   color: ${colors.white};
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   margin-right: 2rem;
+`;
+
+export const ButtonBlue = styled.button`
+  background-color: ${colors.blue};
+  color: ${colors.white};
+  font-size: 1.4rem;
 `;
