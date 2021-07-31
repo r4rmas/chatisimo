@@ -2,11 +2,17 @@ import styled from "styled-components";
 import colors from "../../colors";
 
 export const Container = styled.div`
+  align-items: center;
   background-color: ${colors.black};
   display: flex;
   justify-content: center;
   padding: 1.5rem;
   width: 100%;
+`;
+
+export const Subcontainer = styled.div`
+  display: flex;
+  justify-content: space-around;
 `;
 
 export const Logo = styled.h1``;
@@ -23,4 +29,13 @@ export const White = styled.span`
   font-family: "Roboto";
   font-size: 2rem;
   font-weight: bolder;
+`;
+
+export const Navigator = styled.div``;
+
+export const Endpoint = styled.span`
+  color: ${colors.white};
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-right: 2rem;
 `;
