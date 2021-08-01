@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import colors from "../../colors";
+import screens from "../../screens";
 
 export const Container = styled.header`
   align-items: center;
@@ -12,7 +13,7 @@ export const Container = styled.header`
 
 export const Subcontainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 
 export const Logo = styled.h1``;
@@ -34,10 +35,15 @@ export const White = styled.span`
 export const Navigator = styled.nav``;
 
 export const Endpoint = styled.span`
+  display: none;
   color: ${colors.white};
   font-size: 1.4rem;
   font-weight: bold;
   margin-right: 2rem;
+
+  @media screen and (min-width: ${screens.tablet}px) {
+    display: inline;
+  }
 `;
 
 export const ButtonBlue = styled.button`

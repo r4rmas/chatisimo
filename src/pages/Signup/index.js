@@ -15,7 +15,8 @@ const Signup = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const [error, setError] = useState(false);
+  const [errorPassword, setErrorPassword] = useState(false);
+  const [errorUsername, setErrorUsername] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,7 +25,13 @@ const Signup = () => {
           username: username,
           password: password,
         })
-      : setError(true);
+          .then((response) => response.json())
+          .then((data) => {
+            data.error
+              ? setErrorUsername(true)
+              : localStorage.setItem("token", data.token);
+          })
+      : setErrorPassword(true);
   };
 
   return (
@@ -51,7 +58,12 @@ const Signup = () => {
           type="password"
           required
         />
-        {error && (
+        {errorUsername && (
+          <Center>
+            <Error>ERROR: EL USUARIO YA EXISTE</Error>
+          </Center>
+        )}
+        {errorPassword && (
           <Center>
             <Error>ERROR: CONTRASEÑAS NO COINCIDEN</Error>
           </Center>
