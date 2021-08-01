@@ -19,7 +19,7 @@ const Home = () => {
           <Link to="/about">
             <Pressabe>Conocer más {">"}</Pressabe>
           </Link>
-          <Link to="/signup">
+          <Link to="/signin">
             <ButtonBlue>Unirse</ButtonBlue>
           </Link>
         </Subcontainer>

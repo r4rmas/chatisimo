@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import Context from "../../context";
 import {
   Container,
   Subcontainer,
@@ -13,6 +14,8 @@ import {
 import { Maxwidth } from "../../styles";
 
 const Header = () => {
+  const [{ loggedIn }] = useContext(Context);
+
   return (
     <Container>
       <Maxwidth>
@@ -23,16 +26,21 @@ const Header = () => {
               <White>ISIMO</White>
             </Link>
           </Logo>
-          <Navigator>
-            <Link to="/about">
-              <Endpoint>SOBRE NOSOTROS</Endpoint>
-            </Link>
-            <Link to="/signin">
-              <ButtonBlue style={{ padding: ".6rem", width: "9rem" }}>
-                ENTRAR
-              </ButtonBlue>
-            </Link>
-          </Navigator>
+          {/*HACER QUE SE MUESTRE EL NOMBRE DEL USUARIO EN VEZ DEL NAVEGADOR SI ESTA LOGUEADO*/}
+          {!loggedIn ? (
+            <Navigator>
+              <Link to="/about">
+                <Endpoint>SOBRE NOSOTROS</Endpoint>
+              </Link>
+              <Link to="/login">
+                <ButtonBlue style={{ padding: ".6rem", width: "9rem" }}>
+                  ENTRAR
+                </ButtonBlue>
+              </Link>
+            </Navigator>
+          ) : (
+            <span>USUARIO</span>
+          )}
         </Subcontainer>
       </Maxwidth>
     </Container>
