@@ -1,18 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
+import { post } from "../../requests";
 import { Black, Container } from "./styles";
-import { Page, Form, Label, Input, ButtonBlue } from "../../styles";
+import {
+  Page,
+  Form,
+  Label,
+  Input,
+  Center,
+  Error,
+  ButtonBlue,
+} from "../../styles";
 
 const Signup = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    password === passwordConfirmation
+      ? post("/signup", {
+          username: username,
+          password: password,
+        })
+      : setError(true);
+  };
+
   return (
     <Page>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Black>UNIRSE</Black>
         <Label>Nuevo usuario:</Label>
-        <Input required />
+        <Input
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
         <Label>Nueva contraseña:</Label>
-        <Input type="password" required />
+        <Input
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          type="password"
+          required
+        />
         <Label>Repita la contraseña:</Label>
-        <Input type="password" required />
+        <Input
+          value={passwordConfirmation}
+          onChange={(e) => setPasswordConfirmation(e.target.value)}
+          type="password"
+          required
+        />
+        {error && (
+          <Center>
+            <Error>ERROR: CONTRASEÑAS NO COINCIDEN</Error>
+          </Center>
+        )}
         <Container>
           <ButtonBlue>UNIRSE</ButtonBlue>
         </Container>

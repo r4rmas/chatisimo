@@ -94,4 +94,10 @@ export const ButtonBlue = styled.button`
   color: ${colors.white};
 `;
 
+export const Error = styled.span`
+  color: ${colors.red};
+  font-size: 1.4rem;
+  font-weight: bold;
+`;
+
 export default GlobalStyle;
