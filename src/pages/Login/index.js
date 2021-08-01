@@ -1,16 +1,46 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import Context from "../../context";
+import { logIn } from "../../context/reducer/actions";
+import { post } from "../../requests";
 import { Black, Container } from "./styles";
-import { Page, Form, Label, Input, ButtonBlue } from "../../styles";
+import { Page, Form, Label, Input, Error, ButtonBlue } from "../../styles";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+  const [state, dispatch] = useContext(Context);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    post("/login", {
+      username: username,
+      password: password,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        data.error ? setError(true) : dispatch(logIn(data.token));
+      });
+  };
+
   return (
     <Page>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Black>ENTRAR</Black>
         <Label>Usuario:</Label>
-        <Input required />
+        <Input
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
         <Label>Contraseña:</Label>
-        <Input type="password" required />
+        <Input
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          type="password"
+          required
+        />
+        {error && <Error>ERROR: USUARIO O CONTRASEÑA INCORRECTA</Error>}
         <Container>
           <ButtonBlue>ENTRAR</ButtonBlue>
         </Container>

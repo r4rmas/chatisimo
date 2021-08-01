@@ -24,7 +24,7 @@ const Signin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     password === passwordConfirmation
-      ? post("/signup", {
+      ? post("/signin", {
           username: username,
           password: password,
         })

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Context from "../../context";
+import { logOut } from "../../context/reducer/actions";
 import {
   Container,
   Subcontainer,
@@ -10,11 +11,16 @@ import {
   Navigator,
   Endpoint,
   ButtonBlue,
+  ButtonLogOut,
 } from "./styles";
 import { Maxwidth } from "../../styles";
 
 const Header = () => {
-  const [{ loggedIn }] = useContext(Context);
+  const [{ loggedIn }, dispatch] = useContext(Context);
+
+  const handleLogOut = () => {
+    dispatch(logOut());
+  };
 
   return (
     <Container>
@@ -26,21 +32,27 @@ const Header = () => {
               <White>ISIMO</White>
             </Link>
           </Logo>
-          {/*HACER QUE SE MUESTRE EL NOMBRE DEL USUARIO EN VEZ DEL NAVEGADOR SI ESTA LOGUEADO*/}
-          {!loggedIn ? (
-            <Navigator>
-              <Link to="/about">
-                <Endpoint>SOBRE NOSOTROS</Endpoint>
-              </Link>
-              <Link to="/login">
-                <ButtonBlue style={{ padding: ".6rem", width: "9rem" }}>
-                  ENTRAR
-                </ButtonBlue>
-              </Link>
-            </Navigator>
-          ) : (
-            <span>USUARIO</span>
-          )}
+          <Navigator>
+            {!loggedIn ? (
+              <>
+                <Link to="/about">
+                  <Endpoint>SOBRE NOSOTROS</Endpoint>
+                </Link>
+                <Link to="/login">
+                  <ButtonBlue style={{ padding: ".6rem", width: "9rem" }}>
+                    ENTRAR
+                  </ButtonBlue>
+                </Link>
+              </>
+            ) : (
+              <>
+                <White>USUARIO</White>
+                <ButtonLogOut onClick={handleLogOut}>
+                  <i className="fas fa-2x fa-sign-out-alt"></i>
+                </ButtonLogOut>
+              </>
+            )}
+          </Navigator>
         </Subcontainer>
       </Maxwidth>
     </Container>

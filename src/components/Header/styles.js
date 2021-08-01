@@ -12,6 +12,7 @@ export const Container = styled.header`
 `;
 
 export const Subcontainer = styled.div`
+  align-items: center;
   display: flex;
   justify-content: space-between;
 `;
@@ -50,4 +51,13 @@ export const ButtonBlue = styled.button`
   background-color: ${colors.blue};
   color: ${colors.white};
   font-size: 1.4rem;
+`;
+
+export const ButtonLogOut = styled.span`
+  color: ${colors.white};
+  cursor: pointer;
+  margin-left: 8rem;
+  &:hover {
+    color: ${colors.blue};
+  }
 `;
