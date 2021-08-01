@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from "react-router-dom";
-import ContextProvider from "./components/ContextProvider";
+import Context from "./context";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Signin from "./pages/Signin";
@@ -16,24 +16,27 @@ import Footer from "./components/Footer";
 import { Screen } from "./styles";
 
 const App = () => {
-  //usar Context y Reducer para manejar el logueo
+  const [{ loggedIn }] = useContext(Context);
 
   return (
-    <ContextProvider>
-      <Screen>
-        <Router>
-          <Header />
-          <Switch>
-            <Route path="/signin" component={Signin} />
-            <Route path="/signup" component={Signup} />
-            <Route path="/about" component={About} />
+    <Screen>
+      <Router>
+        <Header />
+        <Switch>
+          {loggedIn ? (
             <Route path="/dashboard" component={Dashboard} />
-            <Route path="/" component={Home} />
-          </Switch>
-        </Router>
-        <Footer />
-      </Screen>
-    </ContextProvider>
+          ) : (
+            <>
+              <Route path="/signin" component={Signin} />
+              <Route path="/signup" component={Signup} />
+              <Route path="/about" component={About} />
+              <Route path="/" component={Home} />
+            </>
+          )}
+        </Switch>
+      </Router>
+      <Footer />
+    </Screen>
   );
 };
 
