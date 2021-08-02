@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import colors from "../../colors";
+import screens from "../../screens";
 
 export const Container = styled.footer`
   align-items: center;
@@ -14,6 +15,7 @@ export const Subcontainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: ${screens.desktop}px;
   width: 100%;
 `;
 

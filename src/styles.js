@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import colors from "./colors";
+import screens from "./screens";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -40,11 +41,6 @@ const GlobalStyle = createGlobalStyle`
       height: 100vh;
       width: 100vw;
     }
-`;
-
-export const Maxwidth = styled.div`
-  max-width: 1024px;
-  width: 100%;
 `;
 
 export const Center = styled.div`

@@ -6,13 +6,13 @@ const NavigationBar = () => {
   const [friendsActive, setFriendsActive] = useState(true);
 
   return (
-    <>
+    <div>
       <div>
         <span>Amigos</span>
         <span>Notificaciones</span>
-        {friendsActive ? <ListFriends /> : <ListNotifications />}
       </div>
-    </>
+      {friendsActive ? <ListFriends /> : <ListNotifications />}
+    </div>
   );
 };
 

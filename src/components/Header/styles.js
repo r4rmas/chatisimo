@@ -15,6 +15,8 @@ export const Subcontainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
+  max-width: ${screens.desktop}px;
+  width: 100%;
 `;
 
 export const Logo = styled.h1``;
