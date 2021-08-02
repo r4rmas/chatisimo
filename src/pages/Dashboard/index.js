@@ -1,15 +1,24 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import Context from "../../context";
+import { logOut, setUser } from "../../context/reducer/actions";
+import { get } from "../../requests";
 import { Page } from "../../styles";
 
 const Dashboard = () => {
   const [{ user }, dispatch] = useContext(Context);
-  //HACER UN FETCH Y OBTENER LOS DATOS DEL USUARIO DENTRO DEL USEEFFECT
-  //ESOS DATOS ALMACENARLOS EN EL ESTADO DEL CONTEXTO PARA PODER ACCEDERLOS
-  //DESDE EL HEADER
+
+  useEffect(() => {
+    get("/auth", localStorage.getItem("token"))
+      .then((response) => response.json())
+      .then((data) => {
+        data.error ? dispatch(logOut()) : dispatch(setUser(data.user));
+        console.log(user);
+      });
+  });
+
   return (
     <Page>
-      <h2>Dashboard</h2>
+      <h2>{user.password}</h2>
     </Page>
   );
 };

@@ -20,6 +20,8 @@ const Header = () => {
 
   const handleLogOut = () => {
     dispatch(logOut());
+    //si es necesario usar el reload entonces el dispatch no esta funcionando
+    //location.reload();
   };
 
   return (

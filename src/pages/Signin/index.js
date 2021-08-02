@@ -19,7 +19,7 @@ const Signin = () => {
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errorPassword, setErrorPassword] = useState(false);
   const [errorUsername, setErrorUsername] = useState(false);
-  const [{ loggedIn }, dispatch] = useContext(Context);
+  const [, dispatch] = useContext(Context);
 
   const handleSubmit = (e) => {
     e.preventDefault();

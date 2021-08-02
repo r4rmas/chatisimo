@@ -1,10 +1,5 @@
-import React, { useState, useContext } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import React, { useContext } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Context from "./context";
 import Header from "./components/Header";
 import Home from "./pages/Home";

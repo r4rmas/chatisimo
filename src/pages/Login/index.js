@@ -9,7 +9,7 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  const [state, dispatch] = useContext(Context);
+  const [, dispatch] = useContext(Context);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +19,11 @@ const Login = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        data.error ? setError(true) : dispatch(logIn(data.token));
+        if (data.error) setError(true);
+        else {
+          dispatch(logIn(data.token));
+          // location.reload();
+        }
       });
   };
 

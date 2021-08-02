@@ -10,3 +10,13 @@ export const post = (endpoint, data) => {
     body: JSON.stringify(data),
   });
 };
+
+export const get = (endpoint, token) => {
+  return fetch(url + endpoint, {
+    method: "GET",
+    mode: "cors",
+    headers: {
+      "auth-token": token,
+    },
+  });
+};
