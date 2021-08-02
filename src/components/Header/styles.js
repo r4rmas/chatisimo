@@ -33,7 +33,10 @@ export const White = styled.span`
   font-weight: bolder;
 `;
 
-export const Navigator = styled.nav``;
+export const Navigator = styled.nav`
+  align-items: center;
+  display: flex;
+`;
 
 export const Endpoint = styled.span`
   display: none;
@@ -54,10 +57,7 @@ export const ButtonBlue = styled.button`
 `;
 
 export const ButtonLogOut = styled.span`
-  color: ${colors.white};
+  color: ${colors.blue};
   cursor: pointer;
-  margin-left: 8rem;
-  &:hover {
-    color: ${colors.blue};
-  }
+  margin-left: 4rem;
 `;

@@ -16,12 +16,10 @@ import {
 import { Maxwidth } from "../../styles";
 
 const Header = () => {
-  const [{ loggedIn }, dispatch] = useContext(Context);
+  const [{ loggedIn, user }, dispatch] = useContext(Context);
 
   const handleLogOut = () => {
     dispatch(logOut());
-    //si es necesario usar el reload entonces el dispatch no esta funcionando
-    //location.reload();
   };
 
   return (
@@ -48,7 +46,7 @@ const Header = () => {
               </>
             ) : (
               <>
-                <White>USUARIO</White>
+                <White>{user._id}</White>
                 <ButtonLogOut onClick={handleLogOut}>
                   <i className="fas fa-2x fa-sign-out-alt"></i>
                 </ButtonLogOut>
