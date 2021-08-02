@@ -1,11 +1,13 @@
 import React, { useEffect, useContext } from "react";
+import NavigationBar from "./NavigationBar";
+import Chat from "./Chat";
 import Context from "../../context";
 import { logOut, setUser } from "../../context/reducer/actions";
 import { get } from "../../requests";
 import { Page } from "../../styles";
 
 const Dashboard = () => {
-  const [{ user }, dispatch] = useContext(Context);
+  const [, dispatch] = useContext(Context);
 
   useEffect(() => {
     get("/auth", localStorage.getItem("token"))
@@ -18,7 +20,8 @@ const Dashboard = () => {
 
   return (
     <Page>
-      <h2>{user.password}</h2>
+      <NavigationBar />
+      <Chat />
     </Page>
   );
 };
