@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import NavigationBar from "./NavigationBar";
+import SideBar from "./SideBar";
 import Chat from "./Chat";
 import Context from "../../context";
 import { logOut, setUser } from "../../context/reducer/actions";
@@ -21,7 +21,7 @@ const Dashboard = () => {
   return (
     <Page>
       <Container>
-        <NavigationBar />
+        <SideBar />
         <Chat />
       </Container>
     </Page>

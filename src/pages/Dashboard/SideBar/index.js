@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import ListFriends from "../ListFriends";
-import ListNotifications from "../ListNotifications";
+import ListRequests from "../ListRequests";
 import { Container, SwitchButton, Line, Circle, Icon } from "./styles";
 import colors from "../../../colors";
 
-const NavigationBar = () => {
+const SideBar = () => {
   const [chatActive, setChatActive] = useState(true);
 
   return (
@@ -25,9 +25,9 @@ const NavigationBar = () => {
           <i className="fas fa-2x fa-bell" />
         </Icon>
       </Container>
-      {chatActive ? <ListFriends /> : <ListNotifications />}
+      {chatActive ? <ListFriends /> : <ListRequests />}
     </div>
   );
 };
 
-export default NavigationBar;
+export default SideBar;
