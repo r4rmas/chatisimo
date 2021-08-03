@@ -15,7 +15,6 @@ const Dashboard = () => {
       .then((response) => response.json())
       .then((data) => {
         data.error ? dispatch(logOut()) : dispatch(setUser(data.user));
-        console.log(data.user);
       });
   });
 

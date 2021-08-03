@@ -1,17 +1,31 @@
 import React, { useState } from "react";
 import ListFriends from "../ListFriends";
 import ListNotifications from "../ListNotifications";
+import { Container, SwitchButton, Line, Circle, Icon } from "./styles";
+import colors from "../../../colors";
 
 const NavigationBar = () => {
-  const [friendsActive, setFriendsActive] = useState(true);
+  const [chatActive, setChatActive] = useState(true);
 
   return (
     <div>
-      <div>
-        <span>Amigos</span>
-        <span>Notificaciones</span>
-      </div>
-      {friendsActive ? <ListFriends /> : <ListNotifications />}
+      <Container>
+        <Icon
+          style={chatActive ? { color: colors.blue } : { color: colors.black }}
+        >
+          <i className="fas fa-2x fa-comment" />
+        </Icon>
+        <SwitchButton onClick={() => setChatActive(!chatActive)}>
+          <Line />
+          <Circle style={chatActive ? { left: 0 } : { right: 0 }} />
+        </SwitchButton>
+        <Icon
+          style={!chatActive ? { color: colors.blue } : { color: colors.black }}
+        >
+          <i className="fas fa-2x fa-bell" />
+        </Icon>
+      </Container>
+      {chatActive ? <ListFriends /> : <ListNotifications />}
     </div>
   );
 };
