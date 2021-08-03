@@ -1,10 +1,11 @@
 const url = "http://localhost:3000";
 
-export const post = (endpoint, data) => {
+export const post = (endpoint, data, headers = {}) => {
   return fetch(url + endpoint, {
     method: "POST",
     mode: "cors",
     headers: {
+      ...headers,
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),

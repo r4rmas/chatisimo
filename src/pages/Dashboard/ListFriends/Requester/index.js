@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Form, Input, Button } from "./styles";
+import { post } from "../../../../requests";
 
 const Requester = () => {
   const [username, setUsername] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(username);
+    post(
+      "/request",
+      { username: username },
+      { "auth-token": localStorage.getItem("token") }
+    );
   };
 
   return (
