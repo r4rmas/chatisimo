@@ -2,12 +2,13 @@ import styled from "styled-components";
 import colors from "../../../../colors";
 
 export const Form = styled.form`
-  display: flex;
   padding: 1rem;
+  padding-bottom: 0;
 `;
 
 export const Input = styled.input`
   margin-right: 1rem;
+  padding: 0.1rem 0.4rem;
   width: 100%;
 `;
 
@@ -16,4 +17,26 @@ export const Button = styled.button`
   background-color: ${colors.blue};
   padding: 0.5rem;
   width: 20rem;
+`;
+
+export const Container = styled.div`
+  display: flex;
+`;
+
+export const Message = styled.div`
+  align-items: center;
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: bold;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const Success = styled.span`
+  color: ${colors.blue};
+`;
+
+export const Error = styled.span`
+  color: ${colors.red};
 `;

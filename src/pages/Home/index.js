@@ -9,11 +9,9 @@ const Home = () => {
       <Container>
         <Black>BIENVENIDO</Black>
         <Description>
-          <span>
-            Somos un sistema de chat minimalista y privado. Nadie sabrá que
-            estás en línea, te lo aseguramos. Libres de spywares. No necesitas
-            correo eléctronico ni número celular para unirte.
-          </span>
+          Somos un sistema de chat minimalista y privado. Nadie sabrá que estás
+          en línea, te lo aseguramos. No necesitas correo eléctronico ni número
+          celular para unirte.
         </Description>
         <Subcontainer>
           <Link to="/about">

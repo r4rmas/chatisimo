@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 import Request from "./Request";
 import Context from "../../../context";
-import { Tooltip } from "./styles";
+import { Tooltip, Container } from "./styles";
 
 const ListRequests = () => {
   const [{ user }, dispatch] = useContext(Context);
 
   return (
     <>
-      <Tooltip>Solicitudes de amistad pendientes</Tooltip>
+      <Container>
+        <Tooltip>Solicitudes de amistad pendientes</Tooltip>
+      </Container>
       {user.requests.map((requester) => (
         <Request key={requester} requester={requester} />
       ))}

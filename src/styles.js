@@ -14,12 +14,12 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
+      background-color: ${colors.white};
       font-family: 'Lato', sans-serif;
       font-size: 1.4rem;
     }
     button {
       border: none;
-      color: ${colors.black};
       cursor: pointer;
       font-family: 'Lato';
       font-size: 1.6rem;
@@ -62,7 +62,6 @@ export const Page = styled.div`
 `;
 
 export const Form = styled.form`
-  color: ${colors.black};
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
@@ -72,17 +71,16 @@ export const Form = styled.form`
 
 export const Label = styled.label`
   letter-spacing: 0.1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 `;
 
 export const Input = styled.input`
   letter-spacing: 0.1rem;
-  margin-bottom: 1rem;
-  padding: 0.1rem;
+  margin-bottom: 0.8rem;
 `;
 
 export const Pressabe = styled.button`
-  background-color: #ffffffff;
+  background-color: rgba(255, 255, 255, 0);
 `;
 
 export const ButtonBlue = styled.button`

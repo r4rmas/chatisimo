@@ -22,7 +22,6 @@ const Login = () => {
         if (data.error) setError(true);
         else {
           dispatch(logIn(data.token));
-          // location.reload();
         }
       });
   };

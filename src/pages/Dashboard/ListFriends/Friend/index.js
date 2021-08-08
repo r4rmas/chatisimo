@@ -5,7 +5,7 @@ const Friend = ({ user }) => {
   return (
     <Container>
       <span>{user}</span>
-      <i class="fas fa-chevron-right"></i>
+      <i className="fas fa-chevron-right"></i>
     </Container>
   );
 };

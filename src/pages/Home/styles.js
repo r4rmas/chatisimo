@@ -23,7 +23,6 @@ export const Black = styled.h2`
 `;
 
 export const Description = styled.p`
-  color: ${colors.black};
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;

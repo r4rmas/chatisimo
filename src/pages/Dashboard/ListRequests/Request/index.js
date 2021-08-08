@@ -6,9 +6,7 @@ const Request = ({ requester }) => {
   const accept = () => {
     post(
       "/accept/request",
-      {
-        username: requester,
-      },
+      { username: requester },
       { "auth-token": localStorage.getItem("token") }
     );
   };

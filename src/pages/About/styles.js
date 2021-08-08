@@ -9,7 +9,6 @@ export const Container = styled.div`
 `;
 
 export const Description = styled.p`
-  color: ${colors.black};
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
