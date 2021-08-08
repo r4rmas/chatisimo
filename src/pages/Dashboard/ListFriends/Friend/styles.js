@@ -3,6 +3,8 @@ import colors from "../../../../colors";
 
 export const Container = styled.div`
   border-bottom: solid ${colors.black} 0.1rem;
-  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
   width: 100%;
 `;
