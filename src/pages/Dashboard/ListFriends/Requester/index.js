@@ -5,10 +5,13 @@ import { post } from "../../../../requests";
 const Requester = () => {
   const [username, setUsername] = useState("");
 
+  {
+    /* PENDIENTE: RECIBIR MENSAJE DE EXITO O DE ERROR EN CASO QUE YA SE HAYA ENVIADO UNA SOLICITUD ANTERIORMENTE A ESE USUARIO*/
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     post(
-      "/request",
+      "/send/request",
       { username: username },
       { "auth-token": localStorage.getItem("token") }
     );
