@@ -11,13 +11,19 @@ const Request = ({ requester }) => {
     );
   };
 
-  const decline = () => {};
+  const decline = () => {
+    post(
+      "/decline/request",
+      { username: requester },
+      { "auth-token": localStorage.getItem("token") }
+    );
+  };
 
   return (
     <Container>
       <span>{requester}</span>
       <span>
-        <Decline>Rechazar</Decline>
+        <Decline onClick={() => decline()}>Rechazar</Decline>
         <Accept onClick={() => accept()}>Aceptar</Accept>
       </span>
     </Container>
