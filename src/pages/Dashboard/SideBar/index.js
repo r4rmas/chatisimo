@@ -1,15 +1,22 @@
 import React, { useState } from "react";
 import ListFriends from "../ListFriends";
 import ListRequests from "../ListRequests";
-import { Container, SwitchButton, Line, Circle, Icon } from "./styles";
+import {
+  Container,
+  Subcontainer,
+  SwitchButton,
+  Line,
+  Circle,
+  Icon,
+} from "./styles";
 import colors from "../../../colors";
 
 const SideBar = () => {
   const [chatActive, setChatActive] = useState(true);
 
   return (
-    <div>
-      <Container>
+    <Container>
+      <Subcontainer>
         <Icon
           style={chatActive ? { color: colors.blue } : { color: colors.black }}
         >
@@ -24,9 +31,9 @@ const SideBar = () => {
         >
           <i className="fas fa-2x fa-bell" />
         </Icon>
-      </Container>
+      </Subcontainer>
       {chatActive ? <ListFriends /> : <ListRequests />}
-    </div>
+    </Container>
   );
 };
 

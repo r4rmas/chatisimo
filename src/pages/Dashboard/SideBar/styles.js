@@ -2,6 +2,11 @@ import styled from "styled-components";
 import colors from "../../../colors";
 
 export const Container = styled.div`
+  padding-right: 2rem;
+  width: 35rem;
+`;
+
+export const Subcontainer = styled.div`
   display: flex;
   justify-content: center;
   padding-bottom: 1rem;
