@@ -1,10 +1,20 @@
-import React from "react";
-import { Container } from "./styles";
+import React, { useContext } from "react";
+import Context from "../../../context";
+import { Container, Header, Body, Sender, Message, Icon } from "./styles";
 
 const Chat = () => {
+  const [{ chatActive }] = useContext(Context);
+
   return (
     <Container>
-      <h2>Chat goes here</h2>
+      <Header>{chatActive}</Header>
+      <Body></Body>
+      <Sender>
+        <Message placeholder="Escribe un mensaje" rows="1" />
+        <Icon>
+          <i class="fas fa-paper-plane"></i>
+        </Icon>
+      </Sender>
     </Container>
   );
 };

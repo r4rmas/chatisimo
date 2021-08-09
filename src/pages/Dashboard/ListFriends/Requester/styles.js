@@ -3,13 +3,13 @@ import colors from "../../../../colors";
 
 export const Form = styled.form`
   padding: 1rem;
-  padding-left: 0;
-  padding-bottom: 0;
+  padding-bottom: 0rem;
 `;
 
 export const Input = styled.input`
   margin-right: 1rem;
   padding: 0.1rem 0.4rem;
+  width: 18rem;
 `;
 
 export const Button = styled.button`
@@ -20,6 +20,7 @@ export const Button = styled.button`
 
 export const Container = styled.div`
   display: flex;
+  justify-content: center;
   width: 100%;
 `;
 

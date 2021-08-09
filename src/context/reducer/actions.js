@@ -9,3 +9,7 @@ export const logOut = () => {
 export const setUser = (user) => {
   return { type: "set_user", user: user };
 };
+
+export const setChat = (chat) => {
+  return { type: "set_chat", chat: chat };
+};

@@ -5,9 +5,11 @@ const reducer = (state, action) => {
       return { ...state, loggedIn: true };
     case "log_out":
       localStorage.removeItem("token");
-      return { ...state, loggedIn: false };
+      return { loggedIn: false, user: {}, chatActive: null };
     case "set_user":
       return { ...state, user: action.user };
+    case "set_chat":
+      return { ...state, chatActive: action.chat };
     default:
       return state;
   }

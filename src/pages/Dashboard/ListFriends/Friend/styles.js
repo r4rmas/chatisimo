@@ -8,7 +8,7 @@ export const Container = styled.div`
   display: flex;
   font-size: 1.8rem;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1rem;
   padding-right: 1rem;
   width: 100%;
 `;
