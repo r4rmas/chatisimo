@@ -4,7 +4,7 @@ import Context from "../../../context";
 import { Tooltip, Container } from "./styles";
 
 const ListRequests = () => {
-  const [{ user }, dispatch] = useContext(Context);
+  const [{ user }] = useContext(Context);
 
   return (
     <>

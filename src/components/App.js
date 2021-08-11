@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Context from "./context";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Signin from "./pages/Signin";
-import About from "./pages/About";
-import Dashboard from "./pages/Dashboard";
-import Footer from "./components/Footer";
-import { Screen } from "./styles";
+import Context from "../context";
+import Header from "./Header";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
+import Signin from "../pages/Signin";
+import About from "../pages/About";
+import Dashboard from "../pages/Dashboard";
+import Footer from "./Footer";
+import { Screen } from "../styles";
 
 const App = () => {
   const [{ loggedIn }] = useContext(Context);

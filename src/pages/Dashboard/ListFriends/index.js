@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Context from "../../../context";
 import Requester from "./Requester";
-import { Container } from "./styles";
 import Friend from "./Friend";
 
 const ListFriends = () => {

@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
 import colors from "./colors";
-import screens from "./screens";
 
 const GlobalStyle = createGlobalStyle`
     * {

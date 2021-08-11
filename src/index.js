@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import GlobalStyle from "./src/styles";
-import ContextProvider from "./src/components/ContextProvider";
-import App from "./src/App";
+import GlobalStyle from "./styles";
+import ContextProvider from "./components/ContextProvider";
+import App from "./components/App";
 
 ReactDOM.render(
   <>
