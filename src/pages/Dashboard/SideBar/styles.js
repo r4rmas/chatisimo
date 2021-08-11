@@ -2,7 +2,7 @@ import styled from "styled-components";
 import colors from "../../../colors";
 
 export const Container = styled.div`
-  padding-right: 2rem;
+  padding: 0 1rem;
   width: 35rem;
 `;
 

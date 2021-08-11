@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
       background-color: ${colors.white};
       font-family: 'Lato', sans-serif;
       font-size: 1.4rem;
+      overflow-x: hidden;
     }
     button {
       border: none;
