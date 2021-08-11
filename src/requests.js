@@ -1,4 +1,4 @@
-const url = "http://localhost:3000";
+const url = "https://chatisimo-api.vercel.app";
 
 export const post = (endpoint, data, headers = {}) => {
   return fetch(url + endpoint, {
